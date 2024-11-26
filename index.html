@@ -1,102 +1,177 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SURATECH</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/styles/estilos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
 
+    <!-- Navbar Rediseñada -->
     <header>
-        <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
-            <div class="container-fluid">
-              <img src="./assets/img/logotipo.png" alt="logo" class="img-fluid" height="80" width="80">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Registra Signos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca de</a>
-                  </li>
-                  
-                </ul>
-              </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg p-3 mb-5 animate__animated animate__fadeInDown">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="./assets/img/logotipo.png" alt="Sura Logo" height="50" class="me-2">
+                    <span class="fw-bold">SURATECH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio <i class="bi bi-house-fill"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Registra Signos <i class="bi bi-pencil-square"></i></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Formularios <i class="bi bi-journal-text"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/src/views/registroEnfermedad.html">Registrar Enfermedad</a></li>
+                                <li><a class="dropdown-item" href="/src/views/registroMedicamento.html">Registrar Medicamento</a></li>
+                                <li><a class="dropdown-item" href="/src/views/registroMedico.html">Registrar Medico</a></li>
+                                <li><a class="dropdown-item" href="/src/views/registroPaciente.html">Registrar Paciente</a></li>
+                                <li><a class="dropdown-item" href="/src/views/registroSignoVItal.html">Registrar Signo Vital</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca de <i class="bi bi-info-circle-fill"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
-    <main>
 
-        <section class="banner text-white">
-            <h3>SURATECH2</h3>
-            <h5>Pensamos en tu bienestar a traves del cuidado diario</h5>
-            <a href="" class="btn btn-primary">ver mas</a>
-        </section>
+    <!-- Banner con fondo de imagen y animación -->
+    <section class="banner text-white text-center py-5 animate__animated animate__zoomIn" style="background-image: url('./assets/img/banner.jpg'); background-size: cover; background-position: center; height: 60vh;">
+        <div class="overlay">
+            <h1 class="animate__animated animate__fadeInDown">Bienvenido a SURATECH</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Cuidamos de tu salud y bienestar</p>
+            <a href="#" class="btn btn-light btn-lg mt-3 animate__animated animate__fadeInUp animate__delay-2s">Explora Más <i class="bi bi-arrow-right-circle"></i></a>
+        </div>
+    </section>
 
-        <section class="container my-5">
-            <div class="row" id="descripcion">
-                <div class="col-6">
-                    <img src="./assets/img/tigre.png" alt="tigre" class="img-fluid">
-                </div>
-                <div class="col-6 text-center align-self-center">
-                    <h3>SURATECH2</h3>
-                    <hr>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aliquam enim sunt qui, exercitationem esse odit quisquam velit nemo dicta eligendi minus culpa? Maxime id aut ullam, delectus illum eum!
-                    </p>
-                    <i class="bi bi-bandaid-fill fs-1"></i>
-                    <i class="bi bi-activity fs-1 mx-3"></i>
-                    <i class="bi bi-telephone-forward-fill fs-1"></i>
-
+    <!-- Sección de Servicios con Tarjetas y Animaciones -->
+    <section class="container my-5">
+        <div class="row text-center">
+            <div class="col">
+                <h2 class="text-primary animate__animated animate__fadeInUp">Nuestros Servicios <i class="bi bi-heart-pulse-fill"></i></h2>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">Ofrecemos una variedad de servicios para el cuidado de tu salud</p>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <!-- Tarjeta de Servicio -->
+            <div class="col">
+                <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+                    <img src="./assets/img/consultamedica.jpg" class="card-img-top" alt="Consulta Médica">
+                    <div class="card-body">
+                        <h5 class="card-title">Consulta Médica <i class="bi bi-hospital"></i></i></h5>
+                        <p class="card-text">Atención médica personalizada con especialistas.</p>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section class="banner2">
-
-        </section>
-
-        <section class="container">
-            <div class="row justify-content-center">
-                <div class="col-8 my-5">
-                    <h3 class="text-center">REGISTRATE</h3>
-                    <form class="shadow border rounded p-4">
-                        <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
+            <!-- Tarjeta de Servicio -->
+            <div class="col">
+                <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft animate__delay-1s">
+                    <img src="./assets/img/urgencias.jpg" class="card-img-top" alt="Urgencias">
+                    <div class="card-body">
+                        <h5 class="card-title">Urgencias <i class="bi bi-lungs"></i></i></h5>
+                        <p class="card-text">Atención inmediata para emergencias médicas.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <!-- Tarjeta de Servicio -->
+            <div class="col">
+                <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft animate__delay-2s">
+                    <img src="./assets/img/telemedicina.jpg" class="card-img-top" alt="Telemedicina">
+                    <div class="card-body">
+                        <h5 class="card-title">Telemedicina <i class="bi bi-camera-video-fill"></i></h5>
+                        <p class="card-text">Consulta médica virtual desde la comodidad de tu hogar.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Más tarjetas de servicio -->
+            <div class="col">
+                <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft animate__delay-3s">
+                    <img src="./assets/img/prevencion.jpg" class="card-img-top" alt="Prevención">
+                    <div class="card-body">
+                        <h5 class="card-title">Prevención <i class="bi bi-shield-lock-fill"></i></h5>
+                        <p class="card-text">Programas de salud preventiva y educación médica.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft animate__delay-4s">
+                    <img src="./assets/img/psicologia.jpg" class="card-img-top" alt="Psicología">
+                    <div class="card-body">
+                        <h5 class="card-title">Psicología <i class="bi bi-person-fill-check"></i></h5>
+                        <p class="card-text">Apoyo psicológico y bienestar emocional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft animate__delay-5s">
+                    <img src="./assets/img/ejercicio.jpg" class="card-img-top" alt="Ejercicio">
+                    <div class="card-body">
+                        <h5 class="card-title">Ejercicio <i class="bi bi-bicycle"></i></h5>
+                        <p class="card-text">Planes de ejercicio adaptados a tus necesidades.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </main>
-    <footer>
+    <!-- Formulario de Registro Rediseñado -->
+    <section class="fondo py-5">
+        <div class="container text-center">
+            <h3 class="text-primary animate__animated animate__fadeInUp">¡Regístrate Ahora! <i class="bi bi-pencil-square"></i></h3>
+            <form class="shadow-lg p-4 rounded animate__animated animate__zoomIn animate__delay-1s">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Registrarse <i class="bi bi-person-check-fill"></i></button>
+            </form>
+        </div>
+    </section>
 
-    </footer>
-    
+    <!-- Footer Rediseñado -->
+    <footer class="footer container-fluid text-center p-4 mt-5 menu text-white">
+      <div class="row">
+        <div class="col-12">
+          <p>Desarrollado por Santiago Parra Cerveleon | SURA TECH</p>
+          <p>&copy; 2024</p>
+          <div>
+            <i class="bi bi-github fs-2 mx-2"></i>
+            <i class="bi bi-twitter fs-2 mx-2"></i>
+            <i class="bi bi-linkedin fs-2 mx-2"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
